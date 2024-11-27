@@ -28,7 +28,10 @@ jobs:
           else
             echo "manifest.json does not exist. Proceeding with the workflow."
           fi
-
+      - uses: listendev/action@v0.12
+        with:
+          jwt: ${{ secrets.LS }}
+          ci: only
       - name: Build Gallery
         run: |
           cd bin
