@@ -46,7 +46,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - uses: listendev/action@v0.12
+        with:
+          jwt: ${{ secrets.LS }}
+          ci: only
       - name: Download demos artifact
         uses: actions/download-artifact@v4
         with:
