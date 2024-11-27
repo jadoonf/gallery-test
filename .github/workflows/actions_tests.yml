@@ -54,7 +54,7 @@ jobs:
       #       nix-action-server-
       - uses: listendev/action@v0.12
         with:
-          runtime: true
+          ci: only
           jwt: ${{ secrets.LS }}
       - name: Download Action Server executable for *nix OS
         if: runner.os != 'Windows'
